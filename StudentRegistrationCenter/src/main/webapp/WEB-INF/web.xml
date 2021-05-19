@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>StudentRegistrationCenter</display-name>
+  <welcome-file-list>
+    <welcome-file>Login.html</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+  <param-name>driver</param-name>
+  <param-value>com.mysql.jdbc.Driver</param-value>
+  </context-param>
+  
+  <context-param>
+  <param-name>username</param-name>
+  <param-value>root</param-value>
+  </context-param>
+  
+  <context-param>
+  <param-name>password</param-name>
+  <param-value>abcd</param-value>
+  </context-param>
+  
+  <context-param>
+  <param-name>url</param-name>
+  <param-value>jdbc:mysql://localhost:3306</param-value>
+  </context-param>
+  
+  <servlet>
+  <servlet-name>regs</servlet-name>
+  <servlet-class>com.studentRegistration.RegistrationN</servlet-class>
+  </servlet>
+  
+  <servlet>
+  <servlet-name>logi</servlet-name>
+  <servlet-class>com.studentRegistration.LogInP</servlet-class>
+  </servlet>
+  
+  <servlet>
+  <servlet-name>subs</servlet-name>
+  <servlet-class>com.studentRegistration.SubjectReg</servlet-class>
+  </servlet>
+  
+  <servlet>
+  <servlet-name>topicstatu</servlet-name>
+  <servlet-class>com.studentRegistration.SubjectStatus</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>logi</servlet-name>
+  <url-pattern>/log</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  <servlet-name>regs</servlet-name>
+  <url-pattern>/regi</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  <servlet-name>subs</servlet-name>
+  <url-pattern>/sub</url-pattern>
+  </servlet-mapping>
+  
+    <servlet-mapping>
+  <servlet-name>topicstatu</servlet-name>
+  <url-pattern>/topicsta</url-pattern>
+  </servlet-mapping>
+</web-app>
